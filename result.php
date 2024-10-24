@@ -36,9 +36,9 @@ $_SESSION['lado2'] = $_POST['lado2'] ?? null; // Usa null si no existe lado2
 $_SESSION['lado3'] = $_POST['lado3'] ?? null; // Usa null si no existe lado3
 
 
-switch ($_SESSION['tipoFigura']) {
+switch ($tipoFigura) {
     case 'Circulo':
-        $circulo = new Circulo($_POST['lado1']);
+        $circulo = new Circulo($_SESSION['lado1']);
         echo $circulo;
         break;
     case 'Cuadrado':
