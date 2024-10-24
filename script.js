@@ -3,7 +3,6 @@ function validarFormularioInput() {
     // Inicializamos la variable de control
     let comprobarInput = true;
 
-    // Obtiene los elementos del DOM
     let input = document.getElementById("lado1");
     let lado1 = document.getElementById("lado1").value;
     // // Validación del Lado 1
@@ -18,19 +17,19 @@ function validarFormularioInput() {
         errorLado1.innerHTML = "";
     }
 
-    let tipoFigura = document.getElementsByName("tipoFigura")[0].value;
+    let tipoFigura = document.getElementById("tipoFigura").value;
 
     if (tipoFigura === "Triangulo" || tipoFigura === "Rectangulo") {
 
-        let input3 = document.getElementById("lado2");
+        let input2 = document.getElementById("lado2");
         let lado2 = document.getElementById("lado2").value;
         let errorLado2 = document.getElementById("error-lado2");
         if (lado2 === "" || lado2 <= 0) {
-            input3.style.border = "1px solid red";
+            input2.style.border = "1px solid red";
             errorLado2.innerHTML = "El lado 2 es obligatorio y debe ser un número positivo.";
             comprobarInput = false;
         } else {
-            input3.style.border = "";
+            input2.style.border = "";
             errorLado2.innerHTML = "";
         }
     }
